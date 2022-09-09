@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/scss/main.css">
+    <title>Arthur Uezu</title>
+</head>
+<body >
+    <header>
+        <nav class="container">
+            <a id="nav-home" href="#home">Arthur Uezu</a>
+            <button onclick="handleDropdown()" id="dropdown-button"><img src="./assets/imgs/menu.svg" alt=""></button>
+            <ul id="nav-list">
+                <li class="nav-link">
+                    <a href="#about">Sobre mim</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#experience">Experiência</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#projects">Projetos</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#contact">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="home">
+            <div class="container">
+                <div id="home-img-container">
+                    <img src="./assets/imgs/computer.svg">
+                </div>
+                <h1>Desenvolvedor Front-End</h1>
+                <p>Seu site como ele deve ser.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <img src="./assets/imgs/eu.jpeg" alt="Arthur Uezu">
+                <article>
+                    <h2>Sobre mim</h2>
+                    <p>Meu nome é Arthur, tenho 20 anos e desde que entrei no mundo tech em 2020, aprender e desenvolver são as minhas duas grandes paixões!<br>Atualmente sou desenvolvedor front-end para a <a href="#">Nerdweb</a> e estudante de Ciência da Computação na UNESP, campus São José do Rio Preto!</p>
+                </article>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="container">
+                <h2>Experiência</h2>
+                <ul id="experience-list">
+                    <li>
+                        <h3>Nerdweb</h3>
+                        <div>
+                            <time datetime="2022-08-10">10 de agosto de 2022</time> - Atualmente
+                        </div>
+                        <span><b>Desenvolvedor Front-End</b></span>
+                        <p>Atuando como desenvolvedor Front-End, minhas responsabilidades consistem em implementar modelos de interface de usuário utilizando as melhores práticas de desenvolvimento e também realizar a manutenção de códigos antigos quando necessário.</p>
+                        <br>
+                        <p><b>Tecnologias utilizadas:</b></p>
+                        <ol>
+                            <li>
+                                <p>HTML5</p>
+                            </li>
+                            <li>
+                                <p>SASS</p>
+                            </li>
+                            <li>
+                                <p>CSS3</p>
+                            </li>
+                            <li>
+                                <p>JavaScript</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Educamais e ELSK</h3>
+                        <div>
+                            <time datetime="2022-01-15">15 de janeiro de 2022</time> - <time datetime="2022-09-09">9 de setembro de 2022</time>
+                        </div>
+                        <span><b>Estagiário</b></span>
+                        <p>Atuando como desenvolvedor fullstack, minhas principais responsabilidades envolviam o desenvolvimento e implementação front-back de páginas do sistema e a correção de bugs reportados pelos usuários.</p>
+                        <br>
+                        <p><b>Tecnologias utilizadas:</b></p>
+                        <ol>
+                            <li>
+                                <p>Vue.js</p>
+                            </li>
+                            <li>
+                                <p>Laravel</p>
+                            </li>
+                            <li>
+                                <p>SASS</p>
+                            </li>
+                            <li>
+                                <p>SQL</p>
+                            </li>
+                            <li>
+                                <p>PHP</p>
+                            </li>
+                            <li>
+                                <p>HTML5</p>
+                            </li>
+                            <li>
+                                <p>CSS3</p>
+                            </li>
+                            <li>
+                                <p>JavaScript</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div id="projects-swiper" class="swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a title="Pokedex!" href="https://arthuruezu.github.io/pokedex/">
+                                <img src="./assets/imgs/pkdx.png" alt="pokedex">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a title="Teste de front end da Nerdweb!" href="https://arthuruezu.github.io/nerdweb-frontend-test/">
+                                <img src="./assets/imgs/nrdwb.png" alt="nerdweb frontend test">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a title="Chat desenvolvido com Flask!" href="https://github.com/ArthurUezu/flask-chat">
+                                <img src="./assets/imgs/cht.png" alt="Chat!">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a title="Web Scraper" href="https://github.com/ArthurUezu/projetoProbabilidade">
+                                <img src="./assets/imgs/icon.png" alt="Web scraper">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            oi
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <article>
+                    <h2>Contate-me!</h2>
+                    <p>Sinta-se livre em me conhecer e entrar em contato via minhas redes sociais!</p>
+                </article>
+                <ul id="contact-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/arthur-uezu/"><img src="./assets/imgs/linkedin.svg" alt=""> LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ArthurUezu"><img src="./assets/imgs/github.svg" alt=""> GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/arthur.uezu/"><img src="./assets/imgs/facebook.svg" alt=""> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/arthuruezu/"><img src="./assets/imgs/instagram.svg" alt=""> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="uezuarthur@gmail.com"> @ Email</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dropdown.js"></script>
+    <script>
+        const projectsSwiper = new Swiper("#projects-swiper",{
+            slidesPerView: 1,
+            
+            breakpoints: {
+                "1080":{
+                    slidesPerView: 4,
+                },
+                "900":{
+                    slidesPerView: 2,
+                },
+                "680":{
+                    slidesPerView: 2
+                }
+
+
+            }
+        });
+    </script>
+</body>
+</html>
