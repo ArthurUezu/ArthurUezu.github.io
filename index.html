@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./assets/scss/main.css">
     <title>Arthur Uezu</title>
 </head>
-<body >
-    <header>
+<body id="body" class="top-header">
+    <header >
         <nav class="container">
             <a id="nav-home" href="#home">Arthur Uezu</a>
-            <button onclick="handleDropdown()" id="dropdown-button"><img src="./assets/imgs/menu.svg" alt=""></button>
+            <button onclick="handleDropdown()" id="dropdown-button"><img src="./assets/imgs/menu.svg" class="svg" alt=""></button>
             <ul id="nav-list">
                 <li class="nav-link">
                     <a href="#about">Sobre mim</a>
@@ -26,6 +26,48 @@
                 <li class="nav-link">
                     <a href="#contact">Contato</a>
                 </li>
+                <li class="nav-link">
+                    <a onclick="handleConfigDropdown()" href="#">
+                        <svg class="svg" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </g>
+                        </svg>                        
+                    </a>
+                    <ul id="config-dropdown">
+                        <li class="layout-change">
+                            <a onclick="changeLayout(1)" href="#">
+                                <svg class="svg" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z"/>
+                                        <path d="M22 10v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10h20zm-1-7a1 1 0 0 1 1 1v4H2V4a1 1 0 0 1 1-1h18z"/>
+                                    </g>
+                                </svg>                            
+                            </a>
+                        </li>
+                        <li class="layout-change">
+                            <a onclick="changeLayout(2)" href="#">
+                                <svg class="svg" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z"/>
+                                        <path d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H9V3h12zM7 21H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4v18z"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="changeLayout(3)" href="#">
+                                <svg class="svg" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z"/>
+                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-6.671-5.575A8 8 0 1 0 16.425 5.328a8.997 8.997 0 0 1-2.304 8.793 8.997 8.997 0 0 1-8.792 2.304z"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -33,7 +75,7 @@
         <section id="home">
             <div class="container">
                 <div id="home-img-container">
-                    <img src="./assets/imgs/computer.svg">
+                    <img src="./assets/imgs/computer.svg" class="svg">
                 </div>
                 <h1>Desenvolvedor Front-End</h1>
                 <p>Seu site como ele deve ser.</p>
@@ -155,16 +197,16 @@
                 </article>
                 <ul id="contact-list">
                     <li>
-                        <a href="https://www.linkedin.com/in/arthur-uezu/"><img src="./assets/imgs/linkedin.svg" alt=""> LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/arthur-uezu/"><img src="./assets/imgs/linkedin.svg" class="svg" alt=""> LinkedIn</a>
                     </li>
                     <li>
-                        <a href="https://github.com/ArthurUezu"><img src="./assets/imgs/github.svg" alt=""> GitHub</a>
+                        <a href="https://github.com/ArthurUezu"><img src="./assets/imgs/github.svg" class="svg" alt=""> GitHub</a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/arthur.uezu/"><img src="./assets/imgs/facebook.svg" alt=""> Facebook</a>
+                        <a href="https://www.facebook.com/arthur.uezu/"><img src="./assets/imgs/facebook.svg" class="svg" alt=""> Facebook</a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/arthuruezu/"><img src="./assets/imgs/instagram.svg" alt=""> Instagram</a>
+                        <a href="https://www.instagram.com/arthuruezu/"><img src="./assets/imgs/instagram.svg" class="svg" alt=""> Instagram</a>
                     </li>
                     <li>
                         <a href="uezuarthur@gmail.com"> @ Email</a>
@@ -174,7 +216,11 @@
         </section>
     </main>
     <footer>
-
+        <div class="container">
+            <p>
+                2022 - Arthur Uezu
+            </p>
+        </div>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

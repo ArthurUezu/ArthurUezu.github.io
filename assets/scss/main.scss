@@ -1,10 +1,6 @@
 @import 'meyer_reset.scss';
 :root{
-    --font-light: "Roboto Light", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --font-bold: "Roboto Bold", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --font-color: black;
-    --main-color: black;
-    --main-light-color: white;
+    
 }
 
 @font-face {
@@ -15,17 +11,63 @@
     font-family: "Roboto Light";
     src: url("../fonts/static/RobotoMono-Light.ttf");
 }
+body{
+    --font-color: black;
+    --main-color: black;
+    --main-light-color: white;
+    --font-light: "Roboto Light", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-bold: "Roboto Bold", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--main-light-color);
+}
+body.dark{
+    --font-color: white;
+    --main-color: white;
+    --main-light-color: black;
+    .svg{
+        filter: invert(1);
+    }
+}
+*{
+    color: var(--font-color)
+}
 h1,h2,h3,h4,h5,h6{
     font-family: "Roboto Bold";
 }
 p,a,article{
     font-family: "Roboto Light";
 }
+
 .container{
     max-width: 1280px;
     padding: 0 32px;
     width: 100%;
     margin: 0 auto;
+}
+.top-header{
+    display: flex;
+    flex-direction: column;
+}
+.side-header{
+    @media screen and (min-width: 640px) {
+        display: block;
+        header{
+            display: inline-block;
+            width: 200px;
+            height: 0px;
+            border-bottom: none;
+        }
+        main{
+            display: block;
+            width: calc(100% - 200px);
+            margin-left: auto
+        }
+        footer{
+            display: block;
+            width: calc(100% - 200px);
+            margin-left: auto
+        }
+
+    }
 }
 @import 'header.scss';
 @import 'footer.scss';

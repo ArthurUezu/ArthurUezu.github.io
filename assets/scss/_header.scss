@@ -2,6 +2,7 @@ header{
     border-bottom: 1px solid var(--main-color);
     position: sticky;
     top: 0;
+    z-index: 999;
     background-color: var(--main-light-color);
     nav{
         display: flex;
@@ -41,6 +42,18 @@ header{
                 transform: scale(1.1);
             }
         }
+        #config-dropdown{
+            max-height: 0;
+            height: 0px;
+            overflow: hidden;
+            background-color: var(--main-light-color);
+            transition: height 0.3s ease-in;
+        }
+        #config-dropdown.active{
+            max-height: 40rem;
+            height: 100px;
+            position: absolute;
+        }
         @media screen and (max-width: 640px) { 
             #dropdown-button{
                 display: flex;
@@ -52,7 +65,15 @@ header{
                     width: 24px;
                 }
             }
+            #config-dropdown.active{
+                width: 245px;
+                padding: 25px 0;
+                border: 1px dashed var(--main-color);
+            }
             #nav-list{
+                display: none;
+            }
+            .layout-change{
                 display: none;
             }
             #nav-list.active{
@@ -78,4 +99,23 @@ header{
         }
     }
 
+}
+
+.side-header header{
+    @media (min-width: 640px) {
+        nav{
+            flex-direction: column;
+            #nav-home{
+                margin:50px auto 100px auto;
+            }
+            #nav-list{
+                flex-direction: column;
+                align-items:flex-start;
+                .nav-link{
+                    margin: 15px auto;
+                }
+
+            }
+        }
+    }
 }
