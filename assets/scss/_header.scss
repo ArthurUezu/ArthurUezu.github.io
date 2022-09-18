@@ -29,7 +29,7 @@ header{
             width: 40%;
             min-width: 400px;
             justify-content: space-between;
-
+            align-items: center;
             .nav-link a{
                 text-decoration: none;
                 font-family: var(--font-light);
@@ -38,8 +38,11 @@ header{
             .nav-link{
                 transition: .2s;
             }
-            .nav-link:hover{
-                transform: scale(1.1);
+            @media (min-width: 640px) {
+                
+                .nav-link:hover{
+                    transform: scale(1.1);
+                }
             }
         }
         #config-dropdown{
@@ -47,12 +50,17 @@ header{
             height: 0px;
             overflow: hidden;
             background-color: var(--main-light-color);
-            transition: height 0.3s ease-in;
+            transition: max-height 0.1s ease-in;
         }
         #config-dropdown.active{
             max-height: 40rem;
-            height: 100px;
+            height: fit-content;
             position: absolute;
+            transition: max-height 0.15s ease-in;
+        }
+        .layout-change{
+            transition: max-height 0.15s ease-in;
+
         }
         @media screen and (max-width: 640px) { 
             #dropdown-button{
@@ -66,9 +74,11 @@ header{
                 }
             }
             #config-dropdown.active{
-                width: 245px;
+                width: 268px;
                 padding: 25px 0;
                 border: 1px dashed var(--main-color);
+                left: 0px;
+
             }
             #nav-list{
                 display: none;
@@ -84,6 +94,7 @@ header{
                 right: 32px;
                 min-width: 268px;
                 width: 268px;
+                padding: 25px;
                 background-color: var(--main-light-color);
                 border: 1px dashed var(--main-color);
                 >li {
